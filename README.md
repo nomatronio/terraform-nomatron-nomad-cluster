@@ -55,7 +55,7 @@ module "cluster" {
   source                = "nomatronio/nomad-cluster/nomatron"
   name                  = "primary"
   scope                 = "global"
-  connectivity_mode    = "agent"
+  connectivity_mode   = "agent"
   create_network_agent = true
   network_agent = {
     name = "primary-agent"
@@ -132,3 +132,7 @@ terraform -chdir=tests/harness test
 ```
 
 The tests use a mocked provider and do not connect to a Nomatron server.
+
+## License
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
