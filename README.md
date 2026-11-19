@@ -29,11 +29,11 @@ provider "nomatron" {
 }
 
 module "cluster" {
-  source               = "nomatronio/nomad-cluster/nomatron"
+  source = "nomatronio/nomad-cluster/nomatron"
 
-  name                 = "primary"
-  scope                = "global"
-  connectivity_mode    = "direct"
+  name              = "primary"
+  scope             = "global"
+  connectivity_mode = "direct"
   address           = "https://nomad.example.test:4646"
 }
 ```
@@ -52,10 +52,10 @@ The `agent_token` output is ephemeral and sensitive, so Terraform does not store
 
 ```hcl
 module "cluster" {
-  source                = "nomatronio/nomad-cluster/nomatron"
-  name                  = "primary"
-  scope                 = "global"
-  connectivity_mode   = "agent"
+  source               = "nomatronio/nomad-cluster/nomatron"
+  name                 = "primary"
+  scope                = "global"
+  connectivity_mode    = "agent"
   create_network_agent = true
   network_agent = {
     name = "primary-agent"
