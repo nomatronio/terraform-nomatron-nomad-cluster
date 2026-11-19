@@ -29,11 +29,11 @@ provider "nomatron" {
 }
 
 module "cluster" {
-  source = "nomatronio/nomad-cluster/nomatron"
+  source               = "nomatronio/nomad-cluster/nomatron"
 
-  name              = "primary"
-  scope             = "global"
-  connectivity_mode = "direct"
+  name                 = "primary"
+  scope                = "global"
+  connectivity_mode    = "direct"
   address           = "https://nomad.example.test:4646"
 }
 ```
